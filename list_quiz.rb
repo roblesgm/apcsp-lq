@@ -40,9 +40,15 @@ def series_up(n)
     size = (n*(n + 1))/2
 
     if num == 1
-        new_list
-
+        new_list[size] = size
     end
+
+    if num > 1
+        nums = size - 1
+        new_list[size] = nums
+    end
+
+    size.times
 end
 
 puts series_up(1) # [1]
