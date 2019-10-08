@@ -32,5 +32,20 @@ def bigger_two(list1, list2)
     end
 end
 
-puts bigger_two([1, 2], [3, 4]) #[3, 4]
-puts bigger_two([1, 7], [4, 4]) #[1, 7]
+# puts bigger_two([1, 2], [3, 4]) #[3, 4]
+# puts bigger_two([1, 7], [4, 4]) #[1, 7]
+
+def series_up(n)
+    new_list = []
+    size = (n*(n + 1))/2
+
+    if num == 1
+        new_list
+
+    end
+end
+
+puts series_up(1) # [1]
+puts series_up(2) # [1, 1, 2]
+puts series_up(3) # [1, 1, 2, 3, 1, 2, 3]
+puts series_up(4) # [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
