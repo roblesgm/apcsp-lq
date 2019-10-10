@@ -35,23 +35,23 @@ end
 # puts bigger_two([1, 2], [3, 4]) #[3, 4]
 # puts bigger_two([1, 7], [4, 4]) #[1, 7]
 
-def series_up(n)
-    new_list = []
-    size = (n*(n + 1))/2
+def series_up(num) #started over
+    set = 0
+    list = [] # we know that the list starts empty
 
-    if num == 1
-        new_list[size] = size
+    num.times do |pattern|
+        n = 0 # original number
+        num.times do |num|
+            list[n + set] = n + 1
+            n += 1
+        end
+        set += pattern + 1
+        # tells the number to keep growing
     end
-
-    if num > 1
-        nums = size - 1
-        new_list[size] = nums
-    end
-
-    size.times
+    return list
 end
-
-puts series_up(1) # [1]
-puts series_up(2) # [1, 1, 2]
-puts series_up(3) # [1, 1, 2, 3, 1, 2, 3]
-puts series_up(4) # [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
+# changed puts to print so it was easier to see
+print series_up(1) # [1]
+print series_up(2) # [1, 1, 2]
+print series_up(3) # [1, 1, 2, 3, 1, 2, 3]
+print series_up(4) # [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
